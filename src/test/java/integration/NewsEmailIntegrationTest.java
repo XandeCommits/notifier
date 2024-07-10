@@ -1,4 +1,4 @@
-package unit.integration;
+package integration;
 
 import com.modak.notifier.NotifierApplication;
 import com.modak.notifier.domain.EmailFactory;
