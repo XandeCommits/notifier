@@ -7,13 +7,13 @@ public class NewsEmail implements Email{
 
     private final Integer limit;
     private final String content;
-    private final EmailType type;
+    private final EmailTypeEnum type;
     private final Instant sentAt;
 
     public NewsEmail(String content, Instant sentAt){
         this.limit = 1;
         this.content = content;
-        this.type = EmailType.NEWS;
+        this.type = EmailTypeEnum.NEWS;
         this.sentAt = sentAt != null ? sentAt : Instant.now();
     }
 
@@ -33,7 +33,7 @@ public class NewsEmail implements Email{
     }
 
     @Override
-    public EmailType getType() {
+    public EmailTypeEnum getType() {
         return this.type;
     }
 

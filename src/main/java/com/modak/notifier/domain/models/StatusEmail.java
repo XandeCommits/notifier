@@ -7,13 +7,13 @@ public class StatusEmail implements Email {
 
     private final Integer limit;
     private final String content;
-    private final EmailType type;
+    private final EmailTypeEnum type;
     private final Instant sentAt;
 
     public StatusEmail(String content, Instant sentAt){
         this.limit = 2;
         this.content = content;
-        this.type = EmailType.STATUS;
+        this.type = EmailTypeEnum.STATUS;
         this.sentAt = sentAt != null ? sentAt : Instant.now();
     }
 
@@ -33,7 +33,7 @@ public class StatusEmail implements Email {
     }
 
     @Override
-    public EmailType getType() {
+    public EmailTypeEnum getType() {
         return this.type;
     }
 

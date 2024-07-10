@@ -7,13 +7,13 @@ public class MarketingEmail implements Email {
 
     private final Integer limit;
     private final String content;
-    private final EmailType type;
+    private final EmailTypeEnum type;
     private final Instant sentAt;
 
     public MarketingEmail(String content, Instant sentAt){
         this.limit = 3;
         this.content = content;
-        this.type = EmailType.MARKETING;
+        this.type = EmailTypeEnum.MARKETING;
         this.sentAt = sentAt != null ? sentAt : Instant.now();
     }
 
@@ -33,7 +33,7 @@ public class MarketingEmail implements Email {
     }
 
     @Override
-    public EmailType getType() {
+    public EmailTypeEnum getType() {
         return this.type;
     }
 

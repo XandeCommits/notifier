@@ -1,6 +1,6 @@
 package com.modak.notifier.domain.models;
 
-public enum EmailType {
+public enum EmailTypeEnum {
 
     STATUS,
     MARKETING,

@@ -3,7 +3,6 @@ package com.modak.notifier.adapters.in.http;
 import com.modak.notifier.application.EmailSender;
 import com.modak.notifier.domain.EmailFactory;
 import com.modak.notifier.domain.models.Email;
-import com.modak.notifier.domain.models.EmailType;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

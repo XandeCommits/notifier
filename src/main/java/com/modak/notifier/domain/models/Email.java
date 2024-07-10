@@ -7,6 +7,6 @@ public interface Email {
     Instant getMaxWindow();
     Integer getLimit();
     String getContent();
-    EmailType getType();
+    EmailTypeEnum getType();
     Instant getSentAt();
 }

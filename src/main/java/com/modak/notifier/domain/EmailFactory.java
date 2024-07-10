@@ -11,15 +11,15 @@ import java.util.HashMap;
 @Component
 public class EmailFactory {
 
-    private final Map<EmailType, BiFunction<String, Instant, Email>> emailConstructors = new HashMap<>();
+    private final Map<EmailTypeEnum, BiFunction<String, Instant, Email>> emailConstructors = new HashMap<>();
 
     public EmailFactory(){
-        this.emailConstructors.put(EmailType.STATUS, StatusEmail::new);
-        this.emailConstructors.put(EmailType.MARKETING, MarketingEmail::new);
-        this.emailConstructors.put(EmailType.NEWS, NewsEmail::new);
+        this.emailConstructors.put(EmailTypeEnum.STATUS, StatusEmail::new);
+        this.emailConstructors.put(EmailTypeEnum.MARKETING, MarketingEmail::new);
+        this.emailConstructors.put(EmailTypeEnum.NEWS, NewsEmail::new);
     }
 
-    public Email newEmail(EmailType emailType, String emailContent, Instant sentAt){
+    public Email newEmail(EmailTypeEnum emailType, String emailContent, Instant sentAt){
         return this.emailConstructors.get(emailType).apply(emailContent, sentAt);
     }
 }

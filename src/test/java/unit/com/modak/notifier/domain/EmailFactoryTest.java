@@ -22,7 +22,7 @@ public class EmailFactoryTest {
     public void testNewEmail_StatusEmail() {
 
         Email email = emailFactory.newEmail(
-                EmailType.STATUS,
+                EmailTypeEnum.STATUS,
                 "Status email content",
                 Instant.now()
         );
@@ -34,7 +34,7 @@ public class EmailFactoryTest {
     public void testNewEmail_NewsEmail() {
 
         Email email = emailFactory.newEmail(
-                EmailType.NEWS,
+                EmailTypeEnum.NEWS,
                 "News email content",
                 Instant.now()
         );
@@ -46,7 +46,7 @@ public class EmailFactoryTest {
     public void testNewEmail_MarketingEmail() {
 
         Email email = emailFactory.newEmail(
-                EmailType.MARKETING,
+                EmailTypeEnum.MARKETING,
                 "Marketing email content",
                 Instant.now()
         );
